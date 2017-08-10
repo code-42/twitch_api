@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta content="TwitchTV API Viewer" name="description">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<!-- Latest compiled and minified CSS -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-	</script>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!-- Optional theme -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet"><!-- MY CUSTOM CSS THAT OVERRIDES BOOTSTRAP -->
-	<link href="resources/style.css" rel="stylesheet">
-	<script src="resources/script.js">
-	</script>
-	<title>Twitch.tv App</title>
+<head>
+    <meta charset="utf-8">
+    <meta content="TwitchTV API Viewer" name="description">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional theme -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- MY CUSTOM CSS THAT OVERRIDES BOOTSTRAP -->
+    <link href="resources/style.css" rel="stylesheet">
+    <script src="resources/script.js">
+    </script>
+    <title>Twitch.tv App</title>
 </head>
+
 <body>
-	<header>
-		<div class="navbar-wrapper">
-			<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="https://code-42.github.io/my_portfolio">My Portfolio</a>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header><!-- MAIN CONTENT -->
-	<main>
-		<h1>Twitch.tv JSON API</h1>
-		<div class="container">
-			<!--<form id="source">-->
-			<div class="form-group">
-				<!--<input id="searchTerm" placeholder="Enter a search term or click the Random button for random results" type="text"> -->
-				<!--<button class="btn btn-primary" id="search">Search</button> <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/Special:Random" id="random_btn" target="blank">Random</a>-->
-			</div><!--</form>-->
-			<div id="search_results">
-				<!--<img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2@2x.png" alt="wikipedia logo"/>-->
-				<!--</div>-->
-			</div>
-		</div>
-	</main><!-- END MAIN CONTENT -->
-	<!-- FOOTER -->
-	<br>
-	<footer>
-		<p id="footer">&copy; 2017 Edward Dupre &middot; <a href="https://code-42.github.io/my_portfolio">Back to My Portfolio</a></p>
-	</footer><!-- Bootstrap core JavaScript -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <header>
+        <div class="navbar-wrapper">
+            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="https://code-42.github.io/my_portfolio">My Portfolio</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main>
+        <div>
+            <h1>Twitch.tv JSON API</h1>
+            <a href='http://www.twitch.tv/freecodecamp' target='blank'>
+                <h3>freeCodeCamp<span id="fcc">...</span></h3>
+            </a>
+        </div>
+        <div class="container">
+            <div id="twitchers">
+                <!-- <div id="user"></div> -->
+                <!-- <div id="game"></div> -->
+                <!-- <div id="status"></div>   -->
+            </div>
+        </div>
+    </main>
+    <!-- END MAIN CONTENT -->
+    <!-- FOOTER -->
+    <br>
+    <footer>
+        <p id="footer">&copy; 2017 Edward Dupre &middot; <a href="https://code-42.github.io/my_portfolio">Back to My Portfolio</a></p>
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 </body>
+
 </html>
