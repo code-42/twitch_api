@@ -5,11 +5,11 @@ var client_id = "ENTER_YOUR_CLIENT_ID";
 $(function() {
     var followers = ["iKasperr", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
-    // $.getJSON('https://api.twitch.tv/kraken/users/freecodecamp?client_id=i8bs8r4qbwx5i32va97ejxoi7euk16').done(function(users) {
+    // $.getJSON('https://api.twitch.tv/kraken/users/freecodecamp?client_id=ENTER_YOUR_CLIENT_ID').done(function(users) {
     //     console.log('users == ', users);
     // });
 
-    // $.getJSON('https://api.twitch.tv/kraken/streams/freecodecamp?client_id=i8bs8r4qbwx5i32va97ejxoi7euk16').done(function(streams) {
+    // $.getJSON('https://api.twitch.tv/kraken/streams/freecodecamp?client_id=ENTER_YOUR_CLIENT_ID').done(function(streams) {
     //     // console.log(streams);
     //     if (streams.stream === null) {
     //         $("#fcc").html(' is offline');
