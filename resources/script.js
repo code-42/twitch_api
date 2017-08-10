@@ -26,7 +26,7 @@ $(function() {
             // url: 'https://api.twitch.tv/kraken/streams/' + streams[i],
             url: 'https://api.twitch.tv/kraken/channels/' + followers[i],
             headers: {
-                'client-ID': 'i8bs8r4qbwx5i32va97ejxoi7euk16'
+                'client-ID': 'ENTER_YOUR_CLIENT_ID'
             },
             success: function(channels) {
                 console.log('channels == ', channels);
