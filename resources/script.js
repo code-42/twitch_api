@@ -1,4 +1,4 @@
-var client_id = "i8bs8r4qbwx5i32va97ejxoi7euk16";
+var client_id = "ENTER_YOUR_CLIENT_ID";
 
 // var followers = ["iKasperr", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
@@ -30,7 +30,7 @@ $(function() {
             },
             success: function(channels) {
                 console.log('channels == ', channels);
-                $.getJSON('https://api.twitch.tv/kraken/streams/' + channels.name + '?client_id=i8bs8r4qbwx5i32va97ejxoi7euk16')
+                $.getJSON('https://api.twitch.tv/kraken/streams/' + channels.name + '?client_id=ENTER_YOUR_CLIENT_ID')
                     .done(function(streams) {
 
                         var name = streams._links.self.slice(37);
