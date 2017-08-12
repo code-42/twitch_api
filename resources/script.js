@@ -70,13 +70,11 @@ $(function() {
         html += "</ul>";
         $("#twitchers").html(html);
      
- 
     }
-            $("#addStreamr").change(function(event){
-                // console.log("76.I'm here!");
-                addStreamer(event);
-                // loadMe();
-            });
+    
+    $("#addStreamr").change(function(event){
+        addStreamer(event);
+    });
         
     
    loadMe();
@@ -84,13 +82,12 @@ $(function() {
     function addStreamer(event){
         event.preventDefault();
         var newStreamer = $("#addStreamr").val();
-        console.log("82.newStreamer ==", streamers);
         streamers.push(newStreamer);
         
         loadMe();
-       $("#addStreamr").val(''); 
+        
+        $("#addStreamr").val(''); 
     };    
     
-        
 });
 
