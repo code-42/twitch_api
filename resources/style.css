@@ -352,3 +352,7 @@
  .namer {
      font-size: 48px;
  }
+ 
+ #note{
+  display:none;
+ }

@@ -9,6 +9,7 @@
 
 var streamers = ["iKasperr", "ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "sickmotionlol", "userrerr", "nonexistingstreamer"];
 
+    
 $(function() {
     
     // Add a text field that will add another streamer to the list.
@@ -72,22 +73,47 @@ $(function() {
      
     }
     
+    // this event triggered when a name is entered into the text box
+    // then calls the function addStreamer()
     $("#addStreamr").change(function(event){
         addStreamer(event);
     });
-        
-    
+
+// this try catch block needed so message is displayed
+// stating that my API Key is removed from github.com
+// for security purposes.
+// if the API Key is accessible, this message will not show
+
+try {    
    loadMe();
-   
+} catch(err) {
+    console.log('Error: ' + err.message);
+    var x = document.getElementById("note");
+    x.style.display = 'block';
+}
+ 
+ // this function called when a name is entered into the text box  
     function addStreamer(event){
         event.preventDefault();
         var newStreamer = $("#addStreamr").val();
         streamers.push(newStreamer);
-        
+
+        // reloads the page so new name is added to streamers array
         loadMe();
         
+        // make the text input box blank after addStreamer() is called
         $("#addStreamr").val(''); 
     };    
-    
 });
+    
+
+
+    // var x = document.getElementById("note");
+    // if (client_id){
+    //     console.log("client_id is present", client_id);
+    //     x.style.display = 'none';
+    // } else {
+    //      x.style.display = 'block';
+    // }
+
 
