@@ -12,11 +12,13 @@ var streamers = ["iKasperr", "ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp
     
 $(function() {
     
-    // Add a text field that will add another streamer to the list.
-    var html = "<ul class='list-group' id='ul-list-group'>";
-
     function loadMe(){
         
+// Add a text field that will add another streamer to the list.
+        var html = "<ul class='list-group' id='ul-list-group'>";
+    
+// function loadMe(){
+            
         for (var i = 0; i < streamers.length; i++) {
             var streamer = streamers[i];
             $.ajax({
@@ -73,8 +75,8 @@ $(function() {
      
     }
     
-    // this event triggered when a name is entered into the text box
-    // then calls the function addStreamer()
+// this event triggered when a name is entered into the text box
+// then calls the function addStreamer()
     $("#addStreamr").change(function(event){
         addStreamer(event);
     });
@@ -92,28 +94,20 @@ try {
     x.style.display = 'block';
 }
  
- // this function called when a name is entered into the text box  
+// this function called when a name is entered into the text box  
     function addStreamer(event){
         event.preventDefault();
         var newStreamer = $("#addStreamr").val();
         streamers.push(newStreamer);
 
-        // reloads the page so new name is added to streamers array
+// reloads the page so new name is added to streamers array
         loadMe();
         
-        // make the text input box blank after addStreamer() is called
+// make the text input box blank after addStreamer() is called
         $("#addStreamr").val(''); 
     };    
 });
     
 
-
-    // var x = document.getElementById("note");
-    // if (client_id){
-    //     console.log("client_id is present", client_id);
-    //     x.style.display = 'none';
-    // } else {
-    //      x.style.display = 'block';
-    // }
 
 

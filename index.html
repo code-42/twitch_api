@@ -18,7 +18,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- MY CUSTOM CSS THAT OVERRIDES BOOTSTRAP -->
     <link href="resources/style.css" rel="stylesheet">
-    <script src="resources/keys.js">
+    <script src="resources/keys.jsx">
     </script>
     <script src="resources/script.js">
     </script>
@@ -42,15 +42,25 @@
         <div>
             <h1>Twitch.tv JSON API</h1>
             <div id="note">
-                <h2>NOTE: for security reasons, my api key has been remove from github.com</h2>
-                <h2>You must insert your own api key for app to work.</h2>
-                <p>Your keys.js file should have one line in it, and put it in the resources folder
-                <pre>var client_id='PUT YOUR REAL CLIENT ID HERE';</pre>
-                When you do that, this message will not apprear.
-                </p>
+                <div class="block">
+                    <h2>NOTE: for security reasons, I removed my api key from github.com</h2>
+                    <h2>You must supply your own api key for app to work.  Here's how:</h2>
+                    <ol>
+                    <li>Clone twitch_api project from github.com</li>
+                    <li>change directory into that project folder</li>
+                    <li>Make a file named keys.js and put your Twitch.tv client_id in it:</li>
+                    <li>Copy that file into the resources folder. Like this:</li>
+                    </ol>
+                    <pre>git clone https://github.com/code-42/twitch_api.git<br>cd twitch_api<br>touch resources/keys.js</br>echo "var client_id='PUT YOUR REAL CLIENT ID HERE';" > resources/keys.js</pre>
+                    <p>Now start your web server and run index.html on localhost, or something.
+                    When you do that, this message will not apprear.
+                    </p>
+                   
+                <img src="resources/fcc_UseTheTwitch.png" alt="screenshot of freeCodeCamp Twitch.tv page">
+                </div> 
             </div>
             <label for="addStreamer"></label> 
-            <p><input type="text" id="addStreamr" placeholder="Add another streamer to the list"></p>
+            <p><input type="text" id="addStreamr" placeholder="Add another streamer to the list, then press tab or enter"></p>
             
         </div>
         <div class="container">
