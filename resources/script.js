@@ -112,6 +112,9 @@ $(function() {
         console.log('Error msg: ' + err.message);
         var x = document.getElementById("note");
         x.style.display = 'block';
+        if($("#controls").length){
+            $("#controls").addClass("hidden")
+        }
     }
      
 // this function called when a name is entered into the text box  

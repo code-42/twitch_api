@@ -1,61 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta content="TwitchTV API Viewer" name="description">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <!-- Latest compiled and minified CSS -->
+	<meta charset="utf-8">
+	<meta content="TwitchTV API Viewer" name="description">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!-- Latest compiled and minified CSS -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Optional theme -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
-    <!-- MY CUSTOM CSS THAT OVERRIDES BOOTSTRAP -->
-    <link href="resources/style.css" rel="stylesheet">
-    <script src="resources/keys.js">
-    </script>
-    <script src="resources/script.js">
-    </script>
-    <title>Twitch.tv App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"><!-- Optional theme -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet"><!-- MY CUSTOM CSS THAT OVERRIDES BOOTSTRAP -->
+	<link href="resources/style.css" rel="stylesheet">
+	<script src="resources/keys.js">
+	</script>
+	<script src="resources/script.js">
+	</script>
+	<title>Twitch.tv App</title>
 </head>
-
 <body>
-    <header>
-        <div class="navbar-wrapper">
-            <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="https://code-42.github.io/my_portfolio">My Portfolio</a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!-- MAIN CONTENT -->
-    <main>
-        <div>
-            <h1>Twitch.tv JSON API</h1>
-            <div id="note">
-                <div class="block">
-                    <h2>NOTE: for security reasons, I removed my api key from github.com</h2>
-                    <h2>You must supply your own api key for app to work.  Here's how:</h2>
-                    <ol>
-                    <li>Clone twitch_api project from github.com.</li>
-                    <li>Change directory into that project folder.</li>
-                    <li>Make a file named keys.js and put your Twitch.tv client_id in it:</li>
-                    <li>Copy that file into the resources folder. Like this:</li>
-                    </ol>
-                    <pre>git clone https://github.com/code-42/twitch_api.git<br>cd twitch_api<br>touch resources/keys.js</br>echo "var client_id='PUT YOUR REAL CLIENT ID HERE';" > resources/keys.js</pre>
-                    <p>Now start your web server and run index.html on localhost, or something.
-                    When you do that, this message will not apprear.  Here's why:
-                    </p>
-                    <pre>
+	<header>
+		<div class="navbar-wrapper">
+			<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="https://code-42.github.io/my_portfolio">My Portfolio</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header><!-- MAIN CONTENT -->
+	<main>
+		<div>
+			<h1>Twitch.tv JSON API</h1>
+			<div id="note">
+				<div class="block">
+				<h2>NOTE: for security reasons, I removed my api key from github.com</h2>
+				<h2>You must supply your own api key for app to work. Here's how:</h2>
+				<ol>
+					<li>Clone twitch_api project from github.com.</li>
+					<li>Change directory into that project folder.</li>
+					<li>Make a file named keys.js and put your Twitch.tv client_id in it:</li>
+					<li>Copy that file into the resources folder. Like this:</li>
+				</ol>
+				<pre>git clone https://github.com/code-42/twitch_api.git<br>cd twitch_api<br>touch resources/keys.jsecho "var client_id='PUT YOUR REAL CLIENT ID HERE';" &gt; resources/keys.js</pre>
+				<p>Now start your web server and run index.html on localhost, or something. When you do that, this message will not apprear. Here's why:</p>
+				<pre>
 // this try catch block needed so message is displayed
 // stating that my API Key is removed from github.com
 // but if the API Key is accessible, this message will not show
@@ -65,27 +57,24 @@ try {
 } catch(err) {
     var x = document.getElementById("note");
     x.style.display = 'block';
-}</pre>
-                <img src="resources/fcc_TwitchTV_API.png" alt="screenshot of freeCodeCamp Twitch.tv page">
-                </div> 
-            </div>
-            <label for="addStreamer"></label> 
-            <p><input type="text" id="addStreamr" placeholder="Add another streamer to the list, then press tab or enter"></p>
-        </div>
-        <div class="buttons">
-            <button id="btnAll" class="btn btn-round">Show All</button> <button id="btnOnline" class="btn btn-round">Show Online</button> <button id="btnOffline" class="btn btn-round">Show Offline</button>
-        </div>
-        <br>
-        <div class="container">
-            <div id="twitchers"></div>
-        </div>
-    </main>
-    <!-- END MAIN CONTENT -->
-    <!-- FOOTER -->
-    <br>
-    <footer>
-        <p id="footer">&copy; 2017 Edward Dupre &middot; <a href="https://code-42.github.io/my_portfolio">Back to My Portfolio</a> &middot; <a href="https://github.com/code-42/twitch_api">My Github Repo</a></p>
-    </footer>
+}</pre><img alt="screenshot of freeCodeCamp Twitch.tv page" src="resources/fcc_TwitchTV_API.png"></div>
+			</div>
+			<div id="controls">
+				<label for="addStreamr">Add a streamer: </label>
+				<p><input id="addStreamr" placeholder="Add another streamer to the list, then press tab or enter" type="text"></p>
+				<div class="buttons">
+					<button class="btn btn-round" id="btnAll">Show All</button> <button class="btn btn-round" id="btnOnline">Show Online</button> <button class="btn btn-round" id="btnOffline">Show Offline</button>
+				</div>
+			</div><br>
+			<div class="container">
+				<div id="twitchers"></div>
+			</div>
+		</div>
+	</main><!-- END MAIN CONTENT -->
+	<!-- FOOTER -->
+	<br>
+	<footer>
+		<p id="footer">&copy; 2017 Edward Dupre &middot; <a href="https://code-42.github.io/my_portfolio">Back to My Portfolio</a> &middot; <a href="https://github.com/code-42/twitch_api">My Github Repo</a></p>
+	</footer>
 </body>
-
 </html>
