@@ -379,3 +379,15 @@
     padding: 100px 0  10px 0;
     background-color: green;
 }
+
+.online{
+ display:block;
+}
+
+.offline{
+ display:block;
+}
+
+.inactive{
+ display:block;
+}
